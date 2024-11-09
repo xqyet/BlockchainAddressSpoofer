@@ -5,7 +5,7 @@ A C# WinForms application that generates target wallet addresses based on initia
 ---
 ## Interface
 
-![address_spoofer_GUI](ReportingTemplateProject1/gui-screenshot.png)
+![address_spoofer_GUI](AddressSpoofer/example_gui.png)
 
 ## Features
 
