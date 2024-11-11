@@ -1,7 +1,7 @@
 # Blockchain Address Spoofer Tool
 
 A C# WinForms application that generates target wallet addresses based on initial prefix and grabs from Ethereum transaction history. developed by [xqyet](https://xqyet.dev/).
-Short video demonstration [here](https://www.youtube.com/watch?v=XMH2Fj5r8MU&ab_channel=xqyet). Additional options to be added!
+Short video demonstration [here](https://www.youtube.com/watch?v=XMH2Fj5r8MU&ab_channel=xqyet). 
 
 ---
 ## Interface
