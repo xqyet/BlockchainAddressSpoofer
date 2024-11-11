@@ -56,6 +56,38 @@ namespace AddressSpoofer
             timer.Tick += Timer_Tick;
         }
 
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            SetButtonHighlight(homeButton);
+            // Show or reset the form view as needed for "Home"
+        }
+
+        private void SetButtonHighlight(Button button)
+        {
+            // Reset all buttons to default color
+            homeButton.BackColor = Color.White;
+            placeholderButton1.BackColor = Color.White;
+            placeholderButton2.BackColor = Color.White;
+            placeholderButton3.BackColor = Color.White;
+
+            // Highlight the active button
+            button.BackColor = Color.LightBlue; // Adjust the highlight color as needed
+        }
+
+        // Apply highlight effects for each button on mouse hover
+        private void Button_MouseEnter(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+            if (button != null) button.BackColor = Color.LightGray;
+        }
+
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+            if (button != null && button.BackColor != Color.LightBlue) // Keep highlight if selected
+                button.BackColor = Color.White;
+        }
+
         private async void startButton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(targetPrefixTextBox.Text) || targetPrefixTextBox.Text == "Enter full target address here")

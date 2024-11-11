@@ -6,6 +6,12 @@ namespace AddressSpoofer
     partial class Form1
     {
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.Panel topBarPanel;
+        private System.Windows.Forms.Button homeButton;
+        private System.Windows.Forms.Button placeholderButton1;
+        private System.Windows.Forms.Button placeholderButton2;
+        private System.Windows.Forms.Button placeholderButton3;
+
 
         protected override void Dispose(bool disposing)
         {
@@ -31,6 +37,99 @@ namespace AddressSpoofer
             this.fetchTransactionsButton = new System.Windows.Forms.Button();
             this.analyticsResultsDataGridView = new System.Windows.Forms.DataGridView();
 
+
+
+            // Top Bar Panel
+            this.topBarPanel = new System.Windows.Forms.Panel();
+            this.topBarPanel.BackColor = System.Drawing.Color.LightGray; // Set background color
+            this.topBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topBarPanel.Height = 35; // Thinner bar height for compact look
+            this.Controls.Add(this.topBarPanel);
+
+            // Home Button
+            this.homeButton = new System.Windows.Forms.Button();
+            this.homeButton.Text = "Home";
+            this.homeButton.Size = new System.Drawing.Size(80, 35);
+            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeButton.BackColor = System.Drawing.Color.White;
+            this.homeButton.FlatAppearance.BorderSize = 0; // Remove dark outline
+            this.homeButton.Margin = new Padding(5);
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
+            this.homeButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.homeButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            this.topBarPanel.Controls.Add(this.homeButton);
+
+            // Add hover and leave event handlers for highlight effect
+            this.homeButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.homeButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+
+            // Placeholder Button 1
+            this.placeholderButton1 = new System.Windows.Forms.Button();
+            this.placeholderButton1.Size = new System.Drawing.Size(80, 35);
+            this.placeholderButton1.Text = "Test";
+            this.placeholderButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.placeholderButton1.BackColor = System.Drawing.Color.White;
+            this.placeholderButton1.FlatAppearance.BorderSize = 0; // Remove dark outline
+            this.placeholderButton1.Location = new System.Drawing.Point(75, 0); // Position next to home button
+            this.placeholderButton1.Margin = new Padding(5);
+            this.placeholderButton1.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.placeholderButton1.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            this.topBarPanel.Controls.Add(this.placeholderButton1);
+
+            // Add hover and leave event handlers for highlight effect
+            this.placeholderButton1.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.placeholderButton1.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+
+            // Placeholder Button 2
+            this.placeholderButton2 = new System.Windows.Forms.Button();
+            this.placeholderButton2.Size = new System.Drawing.Size(80, 35);
+            this.placeholderButton2.Text = "Test2";
+            this.placeholderButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.placeholderButton2.BackColor = System.Drawing.Color.White;
+            this.placeholderButton2.FlatAppearance.BorderSize = 0; // Remove dark outline
+            this.placeholderButton2.Location = new System.Drawing.Point(155, 0); // Position next to home button
+            this.placeholderButton2.Margin = new Padding(5);
+            this.placeholderButton2.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.placeholderButton2.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            this.topBarPanel.Controls.Add(this.placeholderButton2);
+
+            // Add hover and leave event handlers for highlight effect
+            this.placeholderButton2.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.placeholderButton2.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+
+            // Placeholder Button 3
+            this.placeholderButton3 = new System.Windows.Forms.Button();
+            this.placeholderButton3.Size = new System.Drawing.Size(80, 35);
+            this.placeholderButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.placeholderButton3.BackColor = System.Drawing.Color.White;
+            this.placeholderButton3.Margin = new Padding(5);
+
+            // Add hover and leave event handlers for highlight effect
+            this.placeholderButton3.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.placeholderButton3.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+
+            // Placeholder Buttons
+            this.placeholderButton1 = new System.Windows.Forms.Button();
+            this.placeholderButton2 = new System.Windows.Forms.Button();
+            this.placeholderButton3 = new System.Windows.Forms.Button();
+            System.Windows.Forms.Button[] buttons = { placeholderButton1, placeholderButton2, placeholderButton3 };
+
+            foreach (var button in buttons)
+            {
+                button.Size = new System.Drawing.Size(60, 25);
+                button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                button.BackColor = System.Drawing.Color.White;
+                button.Margin = new Padding(5);
+                this.topBarPanel.Controls.Add(button); // Add each button to the top bar panel
+            }
+
+            // Add buttons to topBarPanel
+            this.topBarPanel.Controls.Add(this.homeButton);
+            this.topBarPanel.Controls.Add(this.placeholderButton1);
+            this.topBarPanel.Controls.Add(this.placeholderButton2);
+            this.topBarPanel.Controls.Add(this.placeholderButton3);
+
+
             // Icons and Logos
             this.addressSpooferLogo = new System.Windows.Forms.PictureBox();
             this.bscScanPictureBox = new System.Windows.Forms.PictureBox();
@@ -51,58 +150,58 @@ namespace AddressSpoofer
 
             // Target Address Label
             this.targetPrefixLabel.AutoSize = true;
-            this.targetPrefixLabel.Location = new System.Drawing.Point(20, 20);
+            this.targetPrefixLabel.Location = new System.Drawing.Point(20, 50);
             this.targetPrefixLabel.Name = "targetPrefixLabel";
             this.targetPrefixLabel.Size = new System.Drawing.Size(110, 20);
             this.targetPrefixLabel.Text = "Target Address:";
 
             // Target Address TextBox
-            this.targetPrefixTextBox.Location = new System.Drawing.Point(20, 45);
+            this.targetPrefixTextBox.Location = new System.Drawing.Point(20, 75);
             this.targetPrefixTextBox.Size = new System.Drawing.Size(600, 27);
 
             // Start Button
-            this.startButton.Location = new System.Drawing.Point(20, 85);
+            this.startButton.Location = new System.Drawing.Point(20, 115);
             this.startButton.Size = new System.Drawing.Size(100, 35);
             this.startButton.Text = "Start";
             this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
 
             // Abort Button
-            this.abortButton.Location = new System.Drawing.Point(130, 85);
+            this.abortButton.Location = new System.Drawing.Point(130, 115);
             this.abortButton.Size = new System.Drawing.Size(100, 35);
             this.abortButton.Text = "Abort";
             this.abortButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.abortButton.Click += new System.EventHandler(this.abortButton_Click);
 
             // Attempts Label
-            this.attemptsLabel.Location = new System.Drawing.Point(250, 90);
+            this.attemptsLabel.Location = new System.Drawing.Point(250, 120);
             this.attemptsLabel.Size = new System.Drawing.Size(100, 20);
 
             // Results TextBox
-            this.resultsTextBox.Location = new System.Drawing.Point(20, 130);
+            this.resultsTextBox.Location = new System.Drawing.Point(20, 160);
             this.resultsTextBox.Size = new System.Drawing.Size(600, 400);
 
             // Transaction Analytics Label
             this.transactionAnalyticsLabel.AutoSize = true;
-            this.transactionAnalyticsLabel.Location = new System.Drawing.Point(650, 20);
+            this.transactionAnalyticsLabel.Location = new System.Drawing.Point(650, 50);
             this.transactionAnalyticsLabel.Name = "transactionAnalyticsLabel";
             this.transactionAnalyticsLabel.Size = new System.Drawing.Size(160, 20);
             this.transactionAnalyticsLabel.Text = "Transaction Analytics";
 
             // Analytics Address TextBox
-            this.analyticsAddressTextBox.Location = new System.Drawing.Point(650, 45);
+            this.analyticsAddressTextBox.Location = new System.Drawing.Point(650, 75);
             this.analyticsAddressTextBox.Size = new System.Drawing.Size(500, 27);
             this.analyticsAddressTextBox.Text = "Enter Ethereum address here";
 
             // Fetch Transactions Button
-            this.fetchTransactionsButton.Location = new System.Drawing.Point(1160, 45);
+            this.fetchTransactionsButton.Location = new System.Drawing.Point(1160, 75);
             this.fetchTransactionsButton.Size = new System.Drawing.Size(150, 35);
             this.fetchTransactionsButton.Text = "Fetch Transactions";
             this.fetchTransactionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fetchTransactionsButton.Click += new System.EventHandler(this.fetchTransactionsButton_Click);
 
             // Analytics Results DataGridView
-            this.analyticsResultsDataGridView.Location = new System.Drawing.Point(650, 90);
+            this.analyticsResultsDataGridView.Location = new System.Drawing.Point(650, 120);
             this.analyticsResultsDataGridView.Size = new System.Drawing.Size(900, 600);
             this.analyticsResultsDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.analyticsResultsDataGridView.DefaultCellStyle.BackColor = System.Drawing.Color.White;
@@ -128,27 +227,27 @@ namespace AddressSpoofer
 
             // Info Label above BSCScan logo
             this.infoLabel.AutoSize = true;
-            this.infoLabel.Location = new System.Drawing.Point(30, 590); // Adjusted position for wrap effect
+            this.infoLabel.Location = new System.Drawing.Point(30, 620); // Adjusted position for wrap effect
             this.infoLabel.Size = new System.Drawing.Size(500, 60); // Wrap text
             this.infoLabel.Text = "\"This is a proof of concept program developed by xqyet.\nIf you have any questions about this program and/or adding\nan open source automation framework, please reach out to him at www.xqyet.dev\"";
             this.infoLabel.TextAlign = ContentAlignment.MiddleCenter;
             this.infoLabel.Font = new Font(this.infoLabel.Font, FontStyle.Italic);
 
             // Address Spoofer Logo
-            this.addressSpooferLogo.Location = new System.Drawing.Point(1100, 700);  // Bottom right hand side
+            this.addressSpooferLogo.Location = new System.Drawing.Point(1100, 710);  // Bottom right hand side
             this.addressSpooferLogo.Size = new System.Drawing.Size(600, 240);  // Adjustable size
             this.addressSpooferLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.addressSpooferLogo.Image = Image.FromFile(@"C:\Users\giova\source\repos\AddressSpoofer\AddressSpoofer\images\address_spoofer_logo.jpg");
 
             // BSCScan PictureBox
-            this.bscScanPictureBox.Location = new System.Drawing.Point(20, 750);
+            this.bscScanPictureBox.Location = new System.Drawing.Point(20, 780);
             this.bscScanPictureBox.Size = new System.Drawing.Size(150, 50);
             this.bscScanPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bscScanPictureBox.Image = Image.FromFile(@"C:\Users\giova\source\repos\AddressSpoofer\AddressSpoofer\images\bscscan.png");
             this.bscScanPictureBox.Click += (s, e) => System.Diagnostics.Process.Start("https://bscscan.com/txs");
 
             // Etherscan PictureBox
-            this.etherscanPictureBox.Location = new System.Drawing.Point(20, 810);
+            this.etherscanPictureBox.Location = new System.Drawing.Point(20, 840);
             this.etherscanPictureBox.Size = new System.Drawing.Size(165, 55);
             this.etherscanPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.etherscanPictureBox.Image = Image.FromFile(@"C:\Users\giova\source\repos\AddressSpoofer\AddressSpoofer\images\etherscan-logo.png");
