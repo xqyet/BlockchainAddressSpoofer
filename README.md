@@ -6,7 +6,7 @@ Short video demonstration [here](https://www.youtube.com/watch?v=XMH2Fj5r8MU&ab_
 ---
 ## Interface
 
-![address_spoofer_GUI](AddressSpoofer/example_gui.png)
+![address_spoofer_GUI](AddressSpoofer/example_gui2.png)
 
 ## Features
 
