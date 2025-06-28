@@ -19,7 +19,7 @@ namespace AddressSpoofer
         private System.Windows.Forms.Timer timer;
         private CancellationTokenSource cts;
 
-        private const string etherscanApiKey = "api_key"; //etherscan api key required
+        private const string etherscanApiKey = "api_key"; //etherscan api key required, will need in order to pull transaction history
 
         public Form1()
         {
